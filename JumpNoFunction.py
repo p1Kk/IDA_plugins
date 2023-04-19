@@ -17,3 +17,7 @@ for seg in idautils.Segments():
             idaapi.add_func(ea)
             # 刷新函数窗口，以便可以在函数列表中看到新函数
             idaapi.refresh_idaview_anyway()
+
+            
+            
+不完全！
