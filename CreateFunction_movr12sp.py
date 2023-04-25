@@ -19,7 +19,8 @@ for seg in idautils.Segments():
             if insn and insn.get_canon_mnem() == "MOV" and insn.Op1.type == o_reg and insn.Op1.reg == 12 and insn.Op2.type == o_reg and insn.Op2.reg == 13:
                 # 定义一个新的函数，该函数的起始地址为当前地址
                 idaapi.add_func(ea)
-                # 刷新函数窗口，以便可以在函数列表中看到新函数
-                idaapi.refresh_idaview_anyway()
                 print("Create Function at 0x%x" % ea)
+                
+# 刷新函数窗口，以便可以在函数列表中看到新函数
+# idaapi.refresh_idaview_anyway()
 print("Done!")
